@@ -1,0 +1,8 @@
+Dim wShell, oExec
+ Set wShell = CreateObject("WScript.Shell")
+ 
+ Set oExec = wShell.Exec("regedit /s task.reg")
+ 
+ Do While oExec.Status = 0
+      WScript.Sleep 100
+ Loop
