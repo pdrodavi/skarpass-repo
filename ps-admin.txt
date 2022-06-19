@@ -1,0 +1,7 @@
+@echo off 
+chcp 1252
+net session >nul 2>&1 || (powershell start -verb runas '%~0' &exit /b)
+
+echo Tudo que será executado aqui será executado como administrador
+echo.
+pause
